@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
 }
+body{
+  min-width: fit-content;
+}
 main{
   background-color: blueviolet;
   border: 3px solid black;
