@@ -39,18 +39,22 @@ generate.addEventListener("click", () => {
  
 
     bblsortButton.addEventListener("click", ()=> {  
+      delayCount = 0;
       bbsort(div,divSize);
     });
 
     qsortbtn.addEventListener("click", ()=> {
+      delayCount = 0;
       quicksort(div,divSize,0,divSize.length-1);
     });
 
     selectionsortbtn.addEventListener("click", () => {
+      delayCount = 0;
       selectionsort(div,divSize);
     });
 
     insertion.addEventListener("click", () => {
+      delayCount = 0;
       Insertionsort();
     });
     

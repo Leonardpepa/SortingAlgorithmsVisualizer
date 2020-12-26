@@ -1,5 +1,5 @@
 var delay=10000/(Math.floor(200/10)*100);
-var delayCount=0;
+let delayCount=0;
 
 
 function div_update(div,height,color)

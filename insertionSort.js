@@ -1,7 +1,6 @@
 function Insertionsort()
 {
-    for(var j=0;j<divSize.length;j++)
-    {
+    for(var j=0;j<divSize.length;j++){
         var key= divSize[j];
         var i=j-1;
         while(i>=0 && divSize[i]>key)
