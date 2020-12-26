@@ -7,7 +7,7 @@ const qsortbtn = document.getElementById("quicksort");
 const selectionsortbtn = document.getElementById("selectionsort");
 const insertion = document.getElementById("insertion");
 
-let sorted = false;
+let sorting = false;
 
 let array = [];
 let div = [];
@@ -34,46 +34,61 @@ generate.addEventListener("click", () => {
     divSize[i] = Math.floor(Math.random() * 500) + 5;
      div[i].style.height = `${divSize[i]}px`; 
      div[i].style.backgroundColor = "blue"; 
+     sorting = false;
   } 
 });
  
 
     bblsortButton.addEventListener("click", ()=> {  
-      delayCount = 0;
-      bbsort(div,divSize);
+      if(!sorting){
+        delayCount = 0;
+       sorting = bbsort(div,divSize);
+    }
     });
 
     qsortbtn.addEventListener("click", ()=> {
-      delayCount = 0;
-      quicksort(div,divSize,0,divSize.length-1);
+      if(!sorting){
+       delayCount = 0;
+      sorting = quicksort(div,divSize,0,divSize.length-1);
+    }
     });
 
     selectionsortbtn.addEventListener("click", () => {
-      delayCount = 0;
-      selectionsort(div,divSize);
+      if(!sorting){
+        delayCount = 0;
+        sorting =  selectionsort(div,divSize);
+    }
     });
 
     insertion.addEventListener("click", () => {
-      delayCount = 0;
-      Insertionsort();
+      if(!sorting){
+        delayCount = 0;
+        sorting = Insertionsort();
+    }
     });
     
+    onclick =() => {if(sorting){
+      disableButtons();
+    }
+    else{
+      enableButtons();
+    }}
     
     
     
     
-    // const disableButtons = ()=> {
-    //   bblsortButton.disabled = true;
-    //   generate.disabled = true;
-    //   qsortbtn.disabled = true;
-    //   selectionsortbtn.disabled = true;
-    //   insertion.disabled = true;
-    // };
+    const disableButtons = ()=> {
+      bblsortButton.disabled = true;
+      // generate.disabled = true;
+      qsortbtn.disabled = true;
+      selectionsortbtn.disabled = true;
+      insertion.disabled = true;
+    };
     
-    // function enableButtons(){
-    //   bblsortButton.disabled = false;
-    //   generate.disabled = false;
-    //   qsortbtn.disabled = false;
-    //   selectionsortbtn.disabled = false;
-    //   insertion.disabled = false;
-    // }
+    function enableButtons(){
+      bblsortButton.disabled = false;
+      generate.disabled = false;
+      qsortbtn.disabled = false;
+      selectionsortbtn.disabled = false;
+      insertion.disabled = false;
+    }

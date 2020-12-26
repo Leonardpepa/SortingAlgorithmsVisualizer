@@ -14,4 +14,5 @@ function selectionsort(div,divSize){
         div_update(div[i],divSize[i],"blue");
         div_update(div[minIndex],divSize[minIndex],"blue");
     }
+    return true;
   }

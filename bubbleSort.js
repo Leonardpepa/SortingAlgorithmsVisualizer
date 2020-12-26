@@ -16,4 +16,5 @@ function bbsort(div,divSize){
         div_update(div[j],divSize[j+1],"green");
     }
     div_update(div[0],divSize[0],"green");
+    return true;
   };

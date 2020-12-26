@@ -4,6 +4,7 @@ function quicksort(div,divSize,start,end){
       quicksort(div,divSize,start,index-1);
       quicksort(div,divSize,index+1,end); 
     }
+    return true;
   }
   
   function partiton(div,divSize,start,pivot){

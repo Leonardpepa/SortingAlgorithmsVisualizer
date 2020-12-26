@@ -18,4 +18,5 @@ function Insertionsort()
         }
     }
     div_update(div[j-1],divSize[j-1],"green");
+    return true;
 }
