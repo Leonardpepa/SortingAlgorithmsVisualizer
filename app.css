@@ -44,6 +44,7 @@ main{
   font-size: larger;
   color: black;
   background-color:grey;
+  margin-bottom: 10px;
 }
 .btn:hover {
   cursor: pointer;
