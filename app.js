@@ -35,7 +35,14 @@ generate.addEventListener("click", () => {
      div[i].style.height = `${divSize[i]}px`; 
      div[i].style.backgroundColor = "blue"; 
      sorting = false;
+     div[i].style.transition = "all 1s linear";
   } 
+  setTimeout(()=>{
+    for(let i=0; i<100; i++){
+      div[i].style.transition = "none"; 
+    }
+  },1000);
+
 });
  
 
