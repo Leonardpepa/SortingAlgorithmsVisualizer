@@ -22,8 +22,7 @@ for (let i = 0; i < 100; i++) {
   div[i].style.height = `${divSize[i]}px`;
   div[i].style.backgroundColor = "blue";
 }
-
-generate.addEventListener("click", () => {
+function generateArray() {
   for (let i = 0; i < 100; i++) {
     divSize[i] = Math.floor(Math.random() * 500) + 5;
     div[i].style.height = `${divSize[i]}px`;
@@ -36,6 +35,10 @@ generate.addEventListener("click", () => {
       div[i].style.transition = "none";
     }
   }, 1000);
+}
+
+generate.addEventListener("click", () => {
+  generateArray();
 });
 
 bblsortButton.addEventListener("click", () => {
@@ -95,4 +98,6 @@ function enableButtons() {
   qsortbtn.className = "btn";
   selectionsortbtn.className = "btn";
   insertion.className = "btn";
+
+  generateArray();
 }
