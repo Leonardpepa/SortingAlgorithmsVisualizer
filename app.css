@@ -4,10 +4,10 @@
   margin: 0;
   padding: 0;
 }
-body{
+body {
   min-width: fit-content;
 }
-main{
+main {
   background-color: blueviolet;
   border: 3px solid black;
   border-radius: 15px;
@@ -28,13 +28,13 @@ main{
   background-color: chartreuse;
 }
 
-.btn-container{
+.btn-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.btn{
+.btn {
   display: flex;
   margin: auto;
   justify-content: space-between;
@@ -46,24 +46,71 @@ main{
   align-items: center;
   font-size: larger;
   color: black;
-  background-color:grey;
+  background-color: grey;
   margin-bottom: 11px;
 }
 .btn:hover {
   cursor: pointer;
-  background-color: #FABD44;
+  background-color: #fabd44;
   box-shadow: 5px 10px black;
 }
 .btn:active {
   outline: none;
   border: none;
 }
-.btn:focus {outline:0;}
+.btn:focus {
+  outline: 0;
+}
 
+.disabled {
+  cursor: not-allowed;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  width: fit-content;
+  height: 5rem;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  font-size: larger;
+  color: black;
+  background-color: grey;
+  margin-bottom: 11px;
+}
 
+.enbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.enable-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  height: 5rem;
+  font-weight: normal;
+  border: 1px solid black;
+  border-radius: 20px;
+  color: black;
+  background-color: grey;
+  font-size: larger;
+}
+.enable-btn:hover {
+  cursor: pointer;
+  background-color: #fabd44;
+  box-shadow: 5px 10px black;
+}
+.enable-btn:active {
+  outline: none;
+  border: none;
+}
+.enable-btn:focus {
+  outline: 0;
+}
 
-
-.columnContainer{
+.columnContainer {
   display: flex;
   justify-content: center;
   margin-top: 0.1px;
@@ -76,11 +123,11 @@ main{
   margin: 0 2px;
 }
 
-.slider{
+.slider {
   display: flex;
   justify-content: center;
 }
 
-p{
+p {
   margin: 10px 10px;
 }
