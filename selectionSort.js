@@ -6,13 +6,13 @@ function selectionsort(div,divSize){
         if(divSize[j] < divSize[minIndex]) {
           minIndex = j;
           div_update(div[j],divSize[j],"red")
+          div_update(div[i+1],divSize[i+1],"red")
         }
       }
       let temp = divSize[i];
               divSize[i] = divSize[minIndex];
         divSize[minIndex] = temp;
-        div_update(div[i],divSize[i],"blue");
-        div_update(div[minIndex],divSize[minIndex],"blue");
+        div_update(div[i],divSize[i],"green");
     }
-    return true;
+    div_update(div[div.length - 1],divSize[divSize.length - 1],"green");
   }

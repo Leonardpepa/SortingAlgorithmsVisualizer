@@ -6,8 +6,6 @@ const selectionsortbtn = document.getElementById("selectionsort");
 const insertion = document.getElementById("insertion");
 const enableBtn = document.querySelector(".enable-btn");
 
-let sorting = false;
-
 let array = [];
 let div = [];
 let divSize = [];
@@ -43,25 +41,25 @@ generate.addEventListener("click", () => {
 
 bblsortButton.addEventListener("click", () => {
   delayCount = 0;
-  sorting = bbsort(div, divSize);
+  bbsort(div, divSize);
   disableButtons();
 });
 
 qsortbtn.addEventListener("click", () => {
   delayCount = 0;
-  sorting = quicksort(div, divSize, 0, divSize.length - 1);
+  quicksort(div, divSize, 0, divSize.length - 1);
   disableButtons();
 });
 
 selectionsortbtn.addEventListener("click", () => {
   delayCount = 0;
-  sorting = selectionsort(div, divSize);
+  selectionsort(div, divSize);
   disableButtons();
 });
 
 insertion.addEventListener("click", () => {
   delayCount = 0;
-  sorting = Insertionsort();
+  Insertionsort();
   disableButtons();
 });
 
@@ -98,6 +96,6 @@ function enableButtons() {
   qsortbtn.className = "btn";
   selectionsortbtn.className = "btn";
   insertion.className = "btn";
-
   generateArray();
+  location.reload();
 }
